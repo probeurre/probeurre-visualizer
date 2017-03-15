@@ -5,7 +5,7 @@
 ## Requirements
 
 - [Python 3](https://www.python.org/)
-- [pip](https://pip.pypa.io/en/stable/installing/)
+- [pip3](https://pip.pypa.io/en/stable/installing/)
 
 ## Installing
 
