@@ -30,6 +30,6 @@ if not repos:
 
 for repoUrl in repos:
     print('Cloning repo %s' % repoUrl)
-    Repo.clone_from(repoUrl, os.path.join(workingDir))
+    Repo.clone_from(repoUrl, os.path.join(workingDir, os.path.basename(repoUrl)))
 
 server.run("127.0.0.1", 5555, downloaded=repos)
