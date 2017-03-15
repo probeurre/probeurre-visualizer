@@ -11,7 +11,7 @@
 
 In the root directory of the project, run
 
-``pip install -r requirements.txt``
+``pip install -r requirements.txt`` (or maybe ``pip3 install -r requirements.txt``)
 
 ## Usage
 
