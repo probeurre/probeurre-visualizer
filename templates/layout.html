@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Probeurre : ">
+    <meta content="Probeurre" property="og:site_name"/>
+    <meta content="Probeurre" property="og:title"/>
+    <meta content="Probeurre shows statistics about comments on git repositories." property="og:description"/>
+    <link rel="icon" href="/static/img/favicon.png">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Probeurre</title>
+</head>
+<body>
+<header>
+    <h1>Probeurre</h1>
+</header>
+<main>
+    {% if contentTemplate %}
+        {% include contentTemplate %}
+    {% else %}
+        {{ content }}
+    {% endif %}
+</main>
+<footer>
+    Probeurre, by Christophe Blanquet, Kewin Dousse & Davide Mazzoleni
+</footer>
+</body>
+</html>
