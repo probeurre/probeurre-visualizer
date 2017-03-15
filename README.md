@@ -11,8 +11,8 @@
 
 In the root directory of the project, run
 
-``pip install -r requirements.txt`` (or maybe ``pip3 install -r requirements.txt``)
+``pip3 install -r requirements.txt`` (or maybe ``pip install -r requirements.txt``)
 
 ## Usage
 
-Run `probeurre.py` with python 3, typically : `python probeurre.py` or `python3 probeurre.py`
+Run `probeurre.py` with python 3, typically : `python3 probeurre.py` or `python probeurre.py`
