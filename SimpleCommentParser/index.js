@@ -9,16 +9,17 @@ var urls = process.argv.slice(2)
 var output = {};
 
 for (var i = 0; i < urls.length; i++) {
-	var filename = urls[i];
-	// we use sync so we can get them all toghether
-	var data = fs.readFileSync(filename, 'utf8');
-	
-	// this is stupid, it want the object in this format
-	var pattern = { pattern: commentPattern(filename) };
-	// extract comments
-	var report = commentExtract(data, pattern);
-	
-	output[filename] = report;
+  var filename = urls[i];
+  // we use sync so we can get them all toghether
+  var data = fs.readFileSync(filename, 'utf8');
+  
+  // this is stupid, it want the object in this format
+  var pattern = { pattern: commentPattern(filename) };
+  // extract comments to json
+  var report = commentExtract(data, pattern);
+  
+  output[filename] = report;
 }
 
-console.log(output);
+console.log(JSON.stringify(output));
+
