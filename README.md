@@ -16,3 +16,9 @@ In the root directory of the project, run
 ## Usage
 
 Run `probeurre.py` with python 3, typically : `python3 probeurre.py` or `python probeurre.py`
+
+
+### Using SimpleCommentParser
+
+Run the index.js followed by the files you want to have the comments of: `node SimpleCommentParser/index.js <files...>`
+
