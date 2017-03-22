@@ -1,55 +1,59 @@
-
 ## Output
 This is an example output after calling the module with two parameters `probeurre.py` and `probeurre.py`
 
-`{ 'probeurre.py':
-   { '1':
-      { begin: 1,
-        end: 2,
-        codeStart: 3,
-        content: '!/usr/bin/env python\n-*- coding: utf-8 -*-\n',
-        info: [Object],
-        code: '"""' },
-     '3':
-      { begin: 3,
-        end: 5,
-        codeStart: 6,
-        content: 'This file is part of Probeurre.\n',
-        info: [Object],
-        code: 'from argparse import ArgumentParser' },
-     '12':
-      { begin: 12,
-        end: 12,
-        codeStart: 13,
-        content: 'Argument parsing\n',
-        info: [Object],
-        code: 'parser = ArgumentParser(' } },
-  'server.py':
-   { '1':
-      { begin: 1,
-        end: 2,
-        codeStart: 3,
-        content: '!/usr/bin/env python\n-*- coding: utf-8 -*-\n',
-        info: [Object],
-        code: '"""' },
-     '3':
-      { begin: 3,
-        end: 5,
-        codeStart: 6,
-        content: 'This file is part of Probeurre.\n',
-        info: [Object],
-        code: 'from flask import Flask, render_template, request, current_app' },
-     '12':
-      { begin: 12,
-        end: 12,
-        codeStart: 14,
-        content: 'Routes\n',
-        info: [Object],
-        code: '@app.route("/")' },
-     '36':
-      { begin: 36,
-        end: 37,
-        codeStart: 39,
-        content: 'connection = MySQL(db_host, db_user, db_pass, \'uxie\')\nconnection.connect()\n',
-        info: [Object],
-        code: '    app.run(host=ip, port=port)' } } }`
+```json
+{
+   ".\\index.js":{
+      "5":{
+         "begin":5,
+         "end":5,
+         "codeStart":6,
+         "content":"file list\r\n",
+         "info":{
+            "type":"singleline"
+         },
+         "code":"var urls = process.argv.slice(2)"
+      },
+      "8":{
+         "begin":8,
+         "end":8,
+         "codeStart":9,
+         "content":"object output\r\n",
+         "info":{
+            "type":"singleline"
+         },
+         "code":"var output = {};"
+      },
+      "13":{
+         "begin":13,
+         "end":13,
+         "codeStart":14,
+         "content":"we use sync so we can get them all toghether\r\n",
+         "info":{
+            "type":"singleline"
+         },
+         "code":"\tvar data = fs.readFileSync(filename, 'utf8');"
+      },
+      "16":{
+         "begin":16,
+         "end":16,
+         "codeStart":17,
+         "content":"this is stupid, it want the object in this format\r\n",
+         "info":{
+            "type":"singleline"
+         },
+         "code":"\tvar pattern = { pattern: commentPattern(filename) };"
+      },
+      "18":{
+         "begin":18,
+         "end":18,
+         "codeStart":19,
+         "content":"extract comments to json\r\n",
+         "info":{
+            "type":"singleline"
+         },
+         "code":"\tvar report = commentExtract(data, pattern);"
+      }
+   }
+}
+```
