@@ -1,6 +1,6 @@
 # probeurre-visualizer
 
-**probeurre** shows statistics about comments on git repositories.
+**probeurre-visualizer** shows statistics about comments on git repositories.
 
 ## Requirements
 
@@ -15,10 +15,4 @@ In the root directory of the project, run
 
 ## Usage
 
-Run `probeurre.py` with python 3, typically : `python3 probeurre.py` or `python probeurre.py`
-
-
-### Using SimpleCommentParser
-
-Run the index.js followed by the files you want to have the comments of: `node SimpleCommentParser/index.js <files...>`
-
+Run `probeurre-visualizer.py` with python 3, typically : `python3 probeurre-visualizer.py` or `python probeurre-visualizer.py`
