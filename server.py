@@ -19,6 +19,14 @@ def root():
                            nbAnalyzed=app.config['NBANALYZED'],
                            nbExtracted=app.config['NBEXTRACTED'])
 
+@app.route("/dlAnalyzed")
+def dlAnalyzed():
+    return send_from_directory('static', 'analyzed.json')
+
+@app.route("/dlExtracted")
+def dlExtracted():
+    return send_from_directory('static', 'extracted.json')
+
 @app.errorhandler(403)
 def unauthorized(e):
     return render_template("layout.html", content="Error 403"), 403

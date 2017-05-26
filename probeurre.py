@@ -8,6 +8,7 @@ from tqdm import tqdm
 import server
 import os
 import json
+import shutil
 from pprint import pprint
 
 # Argument parsing
@@ -52,6 +53,8 @@ for key in dataExtracted:
 print(str(comments) + " comment lines")
 print(str(todos) + " TODOs found")
 
+shutil.copy2(extractedPath, 'static/extracted.json')
+shutil.copy2(analyzedPath, 'static/analyzed.json')
 
 repos = None
 

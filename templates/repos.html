@@ -1,5 +1,12 @@
-Downloaded repos :
+<h1>Results</h1>
+<h3>Statistics</h3>
 <table>
     <tr><td>{{ nbExtracted }}</td><td>comment lines</td></tr>
     <tr><td>{{ nbAnalyzed }}</td><td>TODOs</td></tr>
 </table>
+<p><b>{{ (100*nbAnalyzed/nbExtracted)|round(2) }}%</b> of lines contain TODOs in this repository.</p>
+<h3>Download json files</h3>
+<ul>
+    <li>Extracted comment lines : <a href="static/extracted.json">extracted.json</a></li>
+    <li>Comment lines containing TODOs : <a href="static/analyzed.json">analyzed.json</a></li>
+</ul>
