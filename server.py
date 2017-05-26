@@ -13,7 +13,11 @@ global repos
 
 @app.route("/")
 def root():
-    return render_template("layout.html", contentTemplate="repos.html", repos=app.config['REPOS'])
+    return render_template("layout.html", contentTemplate="repos.html",
+                           analyzed=app.config['ANALYZED'],
+                           extracted=app.config['EXTRACTED'],
+                           nbAnalyzed=app.config['NBANALYZED'],
+                           nbExtracted=app.config['NBEXTRACTED'])
 
 @app.errorhandler(403)
 def unauthorized(e):
@@ -27,13 +31,9 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template("layout.html", content="Error 500"), 500
 
-def run(ip="127.0.0.1", port=5555, downloaded=[], db_host='localhost', db_user='uxie', db_pass='uxie'):
-    app.config['DB_HOST'] = db_host
-    app.config['DB_USER'] = db_user
-    app.config['DB_PASS'] = db_pass
-    app.config['REPOS'] = downloaded
-
-    # connection = MySQL(db_host, db_user, db_pass, 'uxie')
-    # connection.connect()
-
+def run(ip="127.0.0.1", port=5555, analyzed={}, extracted={}, nbAnalyzed=0, nbExtracted=0):
+    app.config['ANALYZED'] = analyzed
+    app.config['EXTRACTED'] = extracted
+    app.config['NBANALYZED'] = nbAnalyzed
+    app.config['NBEXTRACTED'] = nbExtracted
     app.run(host=ip, port=port)
