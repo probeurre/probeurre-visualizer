@@ -16,4 +16,6 @@ RUN pip3 install -r /probeurre/requirements.txt
 
 WORKDIR /probeurre
 
+EXPOSE 5555
+
 CMD ["/probeurre/probeurre.py"]
