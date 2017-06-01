@@ -61,4 +61,4 @@ shutil.copy2(analyzedPath, 'static/analyzed.json')
 
 repos = None
 
-server.run("127.0.0.1", 5555, analyzed={}, extracted={}, nbAnalyzed=todos, nbExtracted=comments)
+server.run("0.0.0.0", 5555, analyzed={}, extracted={}, nbAnalyzed=todos, nbExtracted=comments)
