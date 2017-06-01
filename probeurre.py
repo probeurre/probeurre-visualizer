@@ -9,6 +9,7 @@ import server
 import os
 import json
 import shutil
+import sys
 from pprint import pprint
 
 # Argument parsing
@@ -52,6 +53,8 @@ for key in dataExtracted:
 
 print(str(comments) + " comment lines")
 print(str(todos) + " TODOs found")
+
+sys.stdout.flush()
 
 shutil.copy2(extractedPath, 'static/extracted.json')
 shutil.copy2(analyzedPath, 'static/analyzed.json')
